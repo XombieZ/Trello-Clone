@@ -1,0 +1,32 @@
+.btn-action{
+   /* font-size: 1.2rem; */
+   background-color: var(--btn-action);
+   color: white;
+   padding: 0.5rem;
+   border: none;
+   border-radius: 5px;
+}
+
+.btn-action:hover{
+    background-color: var(--btn-action-hover);
+    cursor: pointer;
+}
+
+.btn-cancel-x{
+    background-color: inherit;
+    border: none;
+    color: var(--btn-cancel-x);
+    width: 1.5rem ;
+    height: 1.5rem;
+
+}
+
+.btn-cancel-x svg{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-cancel-x:hover{
+ color: var(--btn-cancel-x-hover);
+ cursor: pointer;
+}

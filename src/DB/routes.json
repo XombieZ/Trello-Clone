@@ -1,0 +1,5 @@
+{
+    "/boards/:boardId/columns/:columnId": "/columns/:columnId",
+    "/boards/:boardId/columns/:columnId/tasks/:taskId": "/tasks/:taskId",
+    "/boards/:boardId/columns/:columnId/tasks" : "/columns/:columnId/tasks"
+}

@@ -1,0 +1,22 @@
+.board-column {
+    background-color: var(--column-background);
+    width: 300px;
+    border-radius: 5px;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+.board-column__name{
+    padding: 0.3rem;
+    margin: 0.5rem;
+    font-weight: 700;
+    width: 80%;
+    cursor: pointer;
+}
+
+.board-column__name--edit{
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    cursor: text;
+}

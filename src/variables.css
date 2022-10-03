@@ -1,0 +1,9 @@
+:root{
+    --column-background: #A68A64DD; 
+    --task-card-background: #C2C5AA;
+    --task-add-background: #B6AD90;
+    --btn-action: #7F4F24;
+    --btn-action-hover: #7f3b24;
+    --btn-cancel-x: #333D29;
+    --btn-cancel-x-hover: #48563a;
+}

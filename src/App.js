@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./icons/icons";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dashboard from "./components/dashboard/dashboard";
+import BoardViewer from "./components/board-viewer/board-viewer";
+import ErrorPage from "./components/error-page/error-page";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 20000,
+    },
+  },
+});
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/boards/:boardId",
+        element: <BoardViewer />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </main>
   );
 }
 

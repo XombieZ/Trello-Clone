@@ -1,0 +1,8 @@
+.task-card{
+    background-color: var(--task-card-background);
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    box-shadow: 3px 8px 7px -5px rgba(0,0,0,0.9)
+    
+}

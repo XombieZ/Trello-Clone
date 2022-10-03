@@ -1,0 +1,5 @@
+.nav-board-list_content{
+    display: flex;
+    flex-direction: column;
+
+}

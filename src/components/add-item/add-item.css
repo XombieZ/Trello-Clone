@@ -1,0 +1,40 @@
+.add-item__add-button{  
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.add-item__add-button svg{
+    margin-right: 0.5rem;
+}
+
+.add-item__add-button:hover{
+    cursor: pointer;
+    background-color: var(--task-add-background);
+}
+
+.add-item__textarea{
+    --margin: 0.5rem;
+    font-family: inherit;
+    resize: none;
+    border-radius: 5px;
+    display: block;
+    margin: var(--margin);
+    padding: 0.3rem;
+    width: calc(100% - (var(--margin) * 2));
+    background-color: var(--task-card-background);
+    box-shadow: 3px 8px 7px -5px rgba(0,0,0,0.9);
+    outline: none;
+    
+}
+
+.add-item__btn-group{
+    display: flex;
+    margin: 0.5rem;
+    align-items: center;
+}
+
+.add-item__btn-group .btn-action{
+    margin-right: 0.5rem;
+}
+

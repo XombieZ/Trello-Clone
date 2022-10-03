@@ -1,0 +1,22 @@
+.nav-board-item{
+    display: inline-block;
+}
+
+.nav-board-item_button{
+    display: inline-block;
+}
+
+.nav-board-item_color{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.nav-board-item_color--red {
+    background-color: red;
+}
+
+.nav-board-item_color--green {
+    background-color: green;
+}
+
