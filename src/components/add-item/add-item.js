@@ -1,9 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useRef, useEffect } from "react";
 
-const AddItem = ({ itemName, isEdit, toggleEdit, onSubmit }) => {
+const AddItem = ({
+  itemName,
+  isEdit,
+  toggleEdit,
+  onSubmit,
+  textAreaOptions,
+}) => {
   const [itemText, setItemText] = useState("");
   const textareaRef = useRef(null);
+
+  const { cols, rows, placeholder } = textAreaOptions;
 
   useEffect(() => {
     if (isEdit) {
@@ -34,9 +42,9 @@ const AddItem = ({ itemName, isEdit, toggleEdit, onSubmit }) => {
             <textarea
               className="add-item__textarea"
               name="taskCardName"
-              cols="20"
-              rows="5"
-              placeholder={`Enter a title for this ${itemName}...`}
+              cols={cols}
+              rows={rows}
+              placeholder={placeholder}
               ref={textareaRef}
               value={itemText}
               onChange={(e) => {

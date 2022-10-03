@@ -9,6 +9,11 @@
       "id": 2,
       "name": "Calculator App",
       "color": "green"
+    },
+    {
+      "id": 3,
+      "name": "Expense Tracker",
+      "color": "yellow"
     }
   ],
   "columns": [
@@ -496,6 +501,21 @@
       "name": "aaaaaaaaaa",
       "boardId": "2",
       "id": 97
+    },
+    {
+      "name": "Not Done",
+      "boardId": "3",
+      "id": 98
+    },
+    {
+      "name": "In Progress",
+      "boardId": "3",
+      "id": 99
+    },
+    {
+      "name": "Done",
+      "boardId": "3",
+      "id": 100
     }
   ],
   "tasks": [

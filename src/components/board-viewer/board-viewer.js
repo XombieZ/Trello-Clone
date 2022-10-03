@@ -85,14 +85,21 @@ const BoardViewer = () => {
               ref={index === columns.length - 1 ? lastColumnRef : null}
             />
           ))}
-          <AddItem
-            itemName="column"
-            isEdit={isEditNewColumn}
-            toggleEdit={() => {
-              setIsEditNewColumn(!isEditNewColumn);
-            }}
-            onSubmit={handleSubmitColumn}
-          />
+          <div className="board-column_add-column-container">
+            <AddItem
+              itemName="column"
+              isEdit={isEditNewColumn}
+              toggleEdit={() => {
+                setIsEditNewColumn(!isEditNewColumn);
+              }}
+              onSubmit={handleSubmitColumn}
+              textAreaOptions={{
+                rows: "1",
+                cols: "20",
+                placeholder: "Enter column title...",
+              }}
+            />
+          </div>
         </div>
       )}
     </section>

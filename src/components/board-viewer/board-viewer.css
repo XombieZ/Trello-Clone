@@ -3,3 +3,16 @@
     gap: 1rem;
     padding: 1rem; 
 }
+
+.board-column_add-column-container{
+    width: 300px;
+    border-radius: 5px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    background-color: #a68a6453;
+    padding-top: 0.5rem;
+}
+
+.board-column_add-column-container .add-item .add-item__add-button:hover {
+   background-color: inherit;
+}
