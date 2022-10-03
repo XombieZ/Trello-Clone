@@ -117,6 +117,11 @@ const BoardColumn = forwardRef(
           isEdit={isEditAddTask}
           toggleEdit={toggleAddTaskEdit}
           onSubmit={handleSubmitTask}
+          textAreaOptions={{
+            rows: "5",
+            cols: "20",
+            placeholder: "Enter a title for this task...",
+          }}
         />
       </article>
     );
