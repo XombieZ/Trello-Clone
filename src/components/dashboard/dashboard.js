@@ -16,7 +16,7 @@ const Dashboard = () => {
             border: "1px solid green",
             flex: 1,
             alignSelf: "stretch",
-            overflow: "scroll",
+            overflowX: "auto",
           }}
           ref={outletContainerRef}
         >

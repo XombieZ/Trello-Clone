@@ -1,8 +1,12 @@
 .nav-board-item{
     display: inline-block;
-    margin-bottom: 0.3rem;
     font-size: 1.1rem;
-    padding: 0.3rem;
+    padding: 0.2rem;
+    text-decoration: none;
+}
+
+.nav-board-item:visited{
+    color : inherit;
 }
 
 .nav-board-item:hover{

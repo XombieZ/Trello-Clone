@@ -121,6 +121,7 @@ const BoardColumn = forwardRef(
             <TaskCard key={task.id} task={task} />
           ))}
           <AddItem
+            key={tasks.length}
             itemName="task"
             isEdit={isEditAddTask}
             toggleEdit={toggleAddTaskEdit}

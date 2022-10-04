@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useCallback } from "react";
 import { useState, useRef, useEffect } from "react";
 
 const AddItem = ({
@@ -20,6 +21,13 @@ const AddItem = ({
     }
   });
 
+  const scrollItemList = useCallback(() => {
+    if (itemListRef && itemListRef.current) {
+      itemListRef.current.scrollTop = itemListRef.current.scrollHeight;
+      console.log("Scrolling list");
+    }
+  }, [itemListRef]);
+
   const handleOnSubmit = (e) => {
     e?.preventDefault();
 
@@ -35,17 +43,10 @@ const AddItem = ({
   };
 
   return (
-    <article
-      className="add-item"
-      ref={() => {
-        if (itemListRef && itemListRef.current) {
-          itemListRef.current.scrollTop = itemListRef.current.scrollHeight;
-        }
-      }}
-    >
+    <article className="add-item">
       {isEdit ? (
         <>
-          <form onSubmit={handleOnSubmit}>
+          <form onSubmit={handleOnSubmit} ref={scrollItemList}>
             <textarea
               className="add-item__textarea"
               name="taskCardName"
