@@ -1,5 +1,13 @@
 .nav-board-item{
     display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    padding: 0.3rem;
+}
+
+.nav-board-item:hover{
+    background-color: var(--board-list-item-hover);
+    cursor:pointer
 }
 
 .nav-board-item_button{

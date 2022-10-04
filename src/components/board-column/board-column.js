@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect, useRef, forwardRef } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getTasks, updateColumnName, setTask } from "../../api/api";
@@ -43,6 +44,7 @@ const BoardColumn = forwardRef(
     const [columnName, setColumnName] = useState(column.name);
     const [editNameActive, setEditNameActive] = useState(false);
     const columnTitleRef = useRef(null);
+    const taskListRef = useRef(null);
 
     useEffect(() => {
       if (editNameActive) {
@@ -108,23 +110,40 @@ const BoardColumn = forwardRef(
             {columnName}
           </p>
         )}
-        <div className="board-column__list">
+        <div
+          className={
+            "board-column__list" +
+            (isEditAddTask ? " board-column--new-task" : "")
+          }
+          ref={taskListRef}
+        >
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} />
           ))}
+          <AddItem
+            itemName="task"
+            isEdit={isEditAddTask}
+            toggleEdit={toggleAddTaskEdit}
+            onSubmit={handleSubmitTask}
+            textAreaOptions={{
+              rows: "5",
+              cols: "20",
+              placeholder: "Enter a title for this task...",
+            }}
+            itemListRef={taskListRef}
+          />
         </div>
-
-        <AddItem
-          itemName="task"
-          isEdit={isEditAddTask}
-          toggleEdit={toggleAddTaskEdit}
-          onSubmit={handleSubmitTask}
-          textAreaOptions={{
-            rows: "5",
-            cols: "20",
-            placeholder: "Enter a title for this task...",
-          }}
-        />
+        {!isEditAddTask && (
+          <div
+            className="add-item__add-button"
+            onClick={() => {
+              toggleAddTaskEdit();
+            }}
+          >
+            <FontAwesomeIcon icon={"plus"} size="1x" />
+            Add a task
+          </div>
+        )}
       </article>
     );
   }

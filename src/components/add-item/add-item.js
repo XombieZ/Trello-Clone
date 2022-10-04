@@ -7,6 +7,7 @@ const AddItem = ({
   toggleEdit,
   onSubmit,
   textAreaOptions,
+  itemListRef,
 }) => {
   const [itemText, setItemText] = useState("");
   const textareaRef = useRef(null);
@@ -24,7 +25,6 @@ const AddItem = ({
 
     if (itemText) {
       onSubmit(itemText);
-      toggleEdit();
       setItemText("");
     }
   };
@@ -35,9 +35,16 @@ const AddItem = ({
   };
 
   return (
-    <article className="add-item">
+    <article
+      className="add-item"
+      ref={() => {
+        if (itemListRef && itemListRef.current) {
+          itemListRef.current.scrollTop = itemListRef.current.scrollHeight;
+        }
+      }}
+    >
       {isEdit ? (
-        <div>
+        <>
           <form onSubmit={handleOnSubmit}>
             <textarea
               className="add-item__textarea"
@@ -76,18 +83,8 @@ const AddItem = ({
               </button>
             </div>
           </form>
-        </div>
-      ) : (
-        <div
-          className="add-item__add-button"
-          onClick={() => {
-            toggleEdit();
-          }}
-        >
-          <FontAwesomeIcon icon={"plus"} size="1x" />
-          Add a {itemName}
-        </div>
-      )}
+        </>
+      ) : null}
     </article>
   );
 };

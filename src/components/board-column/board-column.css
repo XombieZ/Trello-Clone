@@ -25,3 +25,7 @@
     overflow-x: auto;
     max-height: 700px;
 }
+
+.board-column--new-task{
+    max-height: 750px;
+}
