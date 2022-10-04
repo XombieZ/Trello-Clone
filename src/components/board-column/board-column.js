@@ -120,23 +120,26 @@ const BoardColumn = forwardRef(
           {tasks.map((task) => (
             <TaskCard key={task.id} task={task} />
           ))}
-          <AddItem
-            key={tasks.length}
-            itemName="task"
-            isEdit={isEditAddTask}
-            toggleEdit={toggleAddTaskEdit}
-            onSubmit={handleSubmitTask}
-            textAreaOptions={{
-              rows: "5",
-              cols: "20",
-              placeholder: "Enter a title for this task...",
-            }}
-            itemListRef={taskListRef}
-          />
+
+          {isEditAddTask && (
+            <AddItem
+              key={tasks.length}
+              itemName="task"
+              isEdit={isEditAddTask}
+              toggleEdit={toggleAddTaskEdit}
+              onSubmit={handleSubmitTask}
+              textAreaOptions={{
+                rows: "5",
+                cols: "20",
+                placeholder: "Enter a title for this task...",
+              }}
+              itemListRef={taskListRef}
+            />
+          )}
         </div>
         {!isEditAddTask && (
           <div
-            className="add-item__add-button"
+            className="board-column__add-task-button"
             onClick={() => {
               toggleAddTaskEdit();
             }}

@@ -13,10 +13,11 @@ const Dashboard = () => {
         <NavSide />
         <div
           style={{
-            border: "1px solid green",
+            border: "10px solid green",
             flex: 1,
             alignSelf: "stretch",
             overflowX: "auto",
+            backgroundColor: "violet",
           }}
           ref={outletContainerRef}
         >

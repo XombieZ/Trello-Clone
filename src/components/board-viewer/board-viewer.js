@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCallback, useRef, useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getBoard, getBoardColumns, setColumn } from "../../api/api";
@@ -54,7 +55,14 @@ const BoardViewer = () => {
   const [isEditNewColumn, setIsEditNewColumn] = useState(false);
 
   return (
-    <section>
+    <section
+      style={{
+        backgroundImage: `url(${board.background})`,
+        backgroundSize: "cover",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       {isLoadingBoard ? (
         <p>Loading board...</p>
       ) : isErrorBoard ? (
@@ -86,19 +94,33 @@ const BoardViewer = () => {
             />
           ))}
           <div className="board-column_add-column-container">
-            <AddItem
-              itemName="column"
-              isEdit={isEditNewColumn}
-              toggleEdit={() => {
-                setIsEditNewColumn(!isEditNewColumn);
-              }}
-              onSubmit={handleSubmitColumn}
-              textAreaOptions={{
-                rows: "1",
-                cols: "20",
-                placeholder: "Enter column title...",
-              }}
-            />
+            {isEditNewColumn && (
+              <AddItem
+                key={columns.length}
+                itemName="column"
+                toggleEdit={() => {
+                  setIsEditNewColumn(!isEditNewColumn);
+                }}
+                onSubmit={handleSubmitColumn}
+                textAreaOptions={{
+                  rows: "1",
+                  cols: "20",
+                  placeholder: "Enter column title...",
+                }}
+              />
+            )}
+
+            {!isEditNewColumn && (
+              <div
+                className="board-column__add-task-button"
+                onClick={() => {
+                  setIsEditNewColumn(!isEditNewColumn);
+                }}
+              >
+                <FontAwesomeIcon icon={"plus"} size="1x" />
+                Add a task list
+              </div>
+            )}
           </div>
         </div>
       )}

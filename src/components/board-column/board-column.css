@@ -29,3 +29,18 @@
 .board-column--new-task{
     max-height: 750px;
 }
+
+.board-column__add-task-button{  
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.board-column__add-task-button svg{
+    margin-right: 0.5rem;
+}
+
+.board-column__add-task-button:hover{
+    cursor: pointer;
+    background-color: var(--task-add-background);
+}

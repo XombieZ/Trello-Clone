@@ -1,17 +1,4 @@
-.add-item__add-button{  
-    margin: 0 0.5rem 0.5rem 0.5rem;
-    padding: 0.3rem;
-    border-radius: 5px;
-}
 
-.add-item__add-button svg{
-    margin-right: 0.5rem;
-}
-
-.add-item__add-button:hover{
-    cursor: pointer;
-    background-color: var(--task-add-background);
-}
 
 .add-item__textarea{
     --margin: 0.5rem;
