@@ -108,9 +108,11 @@ const BoardColumn = forwardRef(
             {columnName}
           </p>
         )}
-        {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} />
-        ))}
+        <div className="board-column__list">
+          {tasks.map((task) => (
+            <TaskCard key={task.id} task={task} />
+          ))}
+        </div>
 
         <AddItem
           itemName="task"
