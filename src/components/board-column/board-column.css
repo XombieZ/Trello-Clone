@@ -23,7 +23,7 @@
 
 .board-column__list{
     overflow-x: auto;
-    max-height: 700px;
+    max-height: calc(100vh - 280px)
 }
 
 .board-column--new-task{
