@@ -11,15 +11,7 @@ const Dashboard = () => {
       </header>
       <div className="dashboard-container">
         <NavSide />
-        <div
-          style={{
-            flex: 1,
-            alignSelf: "stretch",
-            height: "100%",
-            overflowX: "auto",
-          }}
-          ref={outletContainerRef}
-        >
+        <div className="outlet-container" ref={outletContainerRef}>
           <Outlet context={outletContainerRef} />
         </div>
       </div>

@@ -9,7 +9,7 @@ import ErrorPage from "./components/error-page/error-page";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 20000,
+      staleTime: Infinity,
     },
   },
 });

@@ -2,3 +2,10 @@
     display: flex;
     height: calc(100vh - 100px);
 }
+
+.outlet-container{
+    flex: 1;
+    align-self: stretch;
+    height: 100%;
+    overflow-x: auto;
+}

@@ -58,10 +58,8 @@ const BoardViewer = () => {
     <section
       style={{
         backgroundImage: `url(${board.background})`,
-        backgroundSize: "cover",
-        height: "100%",
-        overflowX: "auto",
       }}
+      className="board-viewer"
     >
       {isLoadingBoard ? (
         <p>Loading board...</p>

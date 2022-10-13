@@ -1,3 +1,9 @@
+.board-viewer{
+    background-size: cover;
+    height: 100%;
+    overflow-x: auto;
+}
+
 .board-column_container{
     display: flex;
     gap: 1rem;
