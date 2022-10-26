@@ -28,3 +28,4 @@ code {
 @import "./components/board-column/board-column.css";
 @import "./components/task-card/task-card.css";
 @import "./components/add-item/add-item.css";
+@import "./components/popup/popup.css";

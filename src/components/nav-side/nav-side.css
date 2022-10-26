@@ -1,6 +1,7 @@
 .nav-side{
     width: 260px;
-    border: 1px solid red;
     flex-shrink: 0;
-
+    background-color: var(--nav-side-background);
+    color:azure;
 }
+

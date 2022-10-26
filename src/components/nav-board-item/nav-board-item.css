@@ -1,8 +1,12 @@
 .nav-board-item{
     display: inline-block;
     font-size: 1.1rem;
-    padding: 0.2rem;
+    padding: 0.2rem 0.3rem;
     text-decoration: none;
+}
+
+.nav-board-item--active{
+    background-color: var(--board-list-item-active);
 }
 
 .nav-board-item:visited{

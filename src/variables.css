@@ -1,10 +1,13 @@
 :root{
-    --column-background: #A68A64DD; 
+    --column-background: #A68A64DD;
+    --popup-background: #a68a64;  
     --task-card-background: #C2C5AA;
     --task-add-background: #B6AD90;
     --btn-action: #7F4F24;
     --btn-action-hover: #7f3b24;
     --btn-cancel-x: #333D29;
     --btn-cancel-x-hover: #48563a;
-    --board-list-item-hover: #656d4a78;
+    --board-list-item-hover: #656d4a79;
+    --board-list-item-active: #656d4a;
+    --nav-side-background: #582F0E;
 }

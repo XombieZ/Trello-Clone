@@ -16,7 +16,7 @@
       "id": 3,
       "name": "Expense Tracker",
       "color": "yellow",
-      "background": "https://picsum.photos/id/30/1920/1080"
+      "background": "https://picsum.photos/id/32/1920/1080"
     }
   ],
   "columns": [
@@ -511,7 +511,7 @@
       "id": 98
     },
     {
-      "name": "In Progress",
+      "name": "In Progress test",
       "boardId": "3",
       "id": 99
     },
@@ -564,6 +564,16 @@
       "name": "fsdfds",
       "boardId": "1",
       "id": 109
+    },
+    {
+      "name": "Test",
+      "boardId": "3",
+      "id": 110
+    },
+    {
+      "name": "To Be Decided",
+      "boardId": "3",
+      "id": 111
     }
   ],
   "tasks": [
@@ -1499,6 +1509,18 @@
       "body": "",
       "columnId": "1",
       "id": 154
+    },
+    {
+      "title": "dasdsad",
+      "body": "",
+      "columnId": "66",
+      "id": 155
+    },
+    {
+      "title": "fdsfdsf",
+      "body": "",
+      "columnId": "66",
+      "id": 156
     }
   ]
 }

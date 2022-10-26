@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useQuery } from "@tanstack/react-query";
 import { getBoards } from "../../api/api";
 import NavBoardItem from "../nav-board-item/nav-board-item";
+import Popup from "../popup/popup";
 
 const NavBoardList = () => {
   const {
@@ -18,8 +20,14 @@ const NavBoardList = () => {
 
   return (
     <section>
-      <header>
-        <p>Your boards</p>
+      <header className="nav-board-list__header">
+        <span className="title">Your boards</span>
+        <button className="btn-add">
+          <FontAwesomeIcon icon={"plus"} />
+        </button>
+        <Popup>
+          <p>Hello World!</p>
+        </Popup>
       </header>
 
       <div className="nav-board-list_content">
